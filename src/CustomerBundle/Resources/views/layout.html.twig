@@ -1,0 +1,12 @@
+{# src/CustomerBundle/Resources/views/layout.html.twig #}
+
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Clients{% endblock %}
+{% block body %}
+	<h1>Clients</h1>
+	<hr>
+
+	{% block customer_body %}
+	{% endblock %}
+{% endblock %}

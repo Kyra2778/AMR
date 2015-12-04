@@ -1,0 +1,19 @@
+cars_home:
+    path:     /
+    defaults: { _controller: CarsBundle:Cars:home }
+
+cars_index:
+    path:     /cars
+    defaults: { _controller: CarsBundle:Cars:index }
+
+cars_list:
+    path:     /cars/cars
+    defaults: { _controller: CarsBundle:Cars:all }
+
+specifications_index:
+    path:     /cars/specifications
+    defaults: { _controller: CarsBundle:Specifications:index }
+
+options_index:
+    path:     /cars/options
+    defaults: { _controller: CarsBundle:Options:index }

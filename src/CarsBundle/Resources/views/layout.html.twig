@@ -1,0 +1,12 @@
+{# src/CarsBundle/Resources/views/layout.html.twig #}
+
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Véhicules{% endblock %}
+{% block body %}
+	<h2>{% block cars_title %}Véhicules{% endblock %}</h2>
+	<hr>
+
+	{% block cars_body %}
+	{% endblock %}
+{% endblock %}

@@ -1,0 +1,51 @@
+{# src/CarsBundle/Resources/views/Cars/index.html.twig #}
+
+{% extends "CarsBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - Accueil
+{% endblock %}
+{% block cars_title %}
+    {{ parent() }}
+{% endblock %}
+{% block cars_body %}
+    <div class="row">
+        <div class="medium-6 large-4 columns">
+            <div class="fiche-synth">
+                <a href="{{ path('cars_list') }}">
+                    <div class="fiche-synt-img">
+                        <img alt="" src="{{ asset('img/cars_img.jpg') }}">
+                    </div>
+                    <div class="fiche-synt-txt">
+                        Véhicules
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="medium-6 large-4 columns">
+            <div class="fiche-synth">
+                <a href="{{ path('specifications_index') }}">
+                    <div class="fiche-synt-img">
+                        <img alt="" src="{{ asset('img/specifications_img.jpg') }}">
+                    </div>
+                    <div class="fiche-synt-txt">
+                        Caractéristiques
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="medium-6 large-4 columns">
+            <div class="fiche-synth">
+                <a href="{{ path('options_index') }}">
+                    <div class="fiche-synt-img">
+                        <img alt="" src="{{ asset('img/options_img.jpg') }}">
+                    </div>
+                    <div class="fiche-synt-txt">
+                        Equipements
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

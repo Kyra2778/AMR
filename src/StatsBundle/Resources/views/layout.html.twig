@@ -1,0 +1,12 @@
+{# src/StatsBundle/Resources/views/layout.html.twig #}
+
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Stats{% endblock %}
+{% block body %}
+	<h2>{% block stats_title %}Statistiques{% endblock %}</h2>
+	<hr>
+
+	{% block stats_body %}
+	{% endblock %}
+{% endblock %}

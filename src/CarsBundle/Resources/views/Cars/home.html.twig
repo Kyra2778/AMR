@@ -1,0 +1,52 @@
+{# src/CarsBundle/Resources/views/Cars/home.html.twig #}
+
+{% extends "CarsBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - Accueil
+{% endblock %}
+{% block cars_title %}
+    Accueil
+{% endblock %}
+{% block cars_body %}
+    <p>Bienvenue dans l'outil d'administration Speedy AMR</p>
+
+    <div class="row">
+        <div class="medium-6 large-4 columns">
+            <div class="fiche-synth">
+                <a href="{{ path('cars_index') }}">
+                    <div class="fiche-synt-img">
+                        <img alt="" src="{{ asset('img/cars_parc_img.jpg') }}">
+                    </div>
+                    <div class="fiche-synt-txt">
+                        Parc de véhicules
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="medium-6 large-4 columns">
+            <div class="fiche-synth">
+                <a href="{{ path('specifications_index') }}">
+                    <div class="fiche-synt-img">
+                        <img alt="" src="{{ asset('img/clients_img.jpg') }}">
+                    </div>
+                    <div class="fiche-synt-txt">
+                        Clients
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="medium-6 large-4 columns">
+            <div class="fiche-synth">
+                <a href="{{ path('stats_index') }}">
+                    <div class="fiche-synt-img">
+                        <img alt="" src="{{ asset('img/stats_img.jpg') }}">
+                    </div>
+                    <div class="fiche-synt-txt">
+                        Outil statistique
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
