@@ -1,0 +1,22 @@
+{# src/CarsBundle/Resources/views/Specifications/brand_add.html.twig #}
+
+{% extends "CarsBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - Ajouter une marque
+{% endblock %}
+{% block cars_title %}
+    {{ parent() }} - Ajouter une marque
+{% endblock %}
+{% block cars_body %}
+    <p>Ajouter une marque</p>
+    <form action="{{ path('brand_add') }}" method="POST">
+        {% include "CarsBundle:Specifications:form.html.twig" %}
+        <div class="row">
+            <div class="large-4 columns">
+                <input class="button" type="submit" value="Ajouter" />
+                <a href="{{ path('brand_list') }} " class="button secondary">Retour liste</a>
+            </div>
+        </div>
+    </form>
+{% endblock %}

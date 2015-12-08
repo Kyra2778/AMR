@@ -14,6 +14,22 @@ specifications_index:
     path:     /cars/specifications
     defaults: { _controller: CarsBundle:Specifications:index }
 
+category_list:
+    path:     /cars/specifications/categories
+    defaults: { _controller: CarsBundle:Specifications:categoryList }
+
+brand_list:
+    path:     /cars/specifications/brand
+    defaults: { _controller: CarsBundle:Specifications:brandList }
+
+brand_add:
+    path:     /cars/specifications/brand/add
+    defaults: { _controller: CarsBundle:Specifications:addBrand }
+
+model_list:
+    path:     /cars/specifications/model
+    defaults: { _controller: CarsBundle:Specifications:modelList }
+
 options_index:
     path:     /cars/options
     defaults: { _controller: CarsBundle:Options:index }

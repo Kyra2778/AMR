@@ -1,0 +1,31 @@
+{# src/CarsBundle/Resources/views/Cars/model_list.html.twig #}
+
+{% extends "CarsBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - Liste marques
+{% endblock %}
+{% block cars_title %}
+    {{ parent() }} - Liste marques
+{% endblock %}
+{% block cars_body %}
+    <p>Liste des marques</p>
+    <table role="grid">
+        <thead>
+            <tr>
+                <th>Marque</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for brand in brands %}
+                <tr>
+                    <td>{{ brand.marque }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

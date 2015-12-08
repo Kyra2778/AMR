@@ -9,5 +9,42 @@
     {{ parent() }} - Caractéristiques
 {% endblock %}
 {% block cars_body %}
-    <p>Specifications</p>
+    <div class="row">
+        <div class="medium-6 large-4 columns">
+            <div class="fiche-synth">
+                <a href="{{ path('category_list') }}">
+                    <div class="fiche-synt-img">
+                        <img alt="" src="{{ asset('img/cars_img.jpg') }}">
+                    </div>
+                    <div class="fiche-synt-txt">
+                        Catégories
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="medium-6 large-4 columns">
+            <div class="fiche-synth">
+                <a href="{{ path('brand_list') }}">
+                    <div class="fiche-synt-img">
+                        <img alt="" src="{{ asset('img/specifications_img.jpg') }}">
+                    </div>
+                    <div class="fiche-synt-txt">
+                        Marques
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="medium-6 large-4 columns">
+            <div class="fiche-synth">
+                <a href="{{ path('model_list') }}">
+                    <div class="fiche-synt-img">
+                        <img alt="" src="{{ asset('img/options_img.jpg') }}">
+                    </div>
+                    <div class="fiche-synt-txt">
+                        Modèles
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 {% endblock %}
