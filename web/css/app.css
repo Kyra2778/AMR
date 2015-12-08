@@ -41,6 +41,11 @@
 	font-size:1.2em
 }
 
+.buttonAMR:hover, .buttonAMR:focus {
+    background: #729EBF;
+    color: #fff;
+}
+
 #menu-accordeon {
 	padding:0;
 	margin:0;
