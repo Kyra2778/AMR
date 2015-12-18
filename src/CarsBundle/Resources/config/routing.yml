@@ -18,6 +18,18 @@ category_list:
     path:     /cars/specifications/categories
     defaults: { _controller: CarsBundle:Specifications:categoryList }
 
+category_add:
+    path:     /cars/specifications/category/add
+    defaults: { _controller: CarsBundle:Specifications:addCategory }
+
+category_update:
+    path:     /cars/specifications/category/update/{id}
+    defaults: { _controller: CarsBundle:Specifications:updateCategory }
+
+category_delete:
+    path:     /cars/specifications/category/delete/{id}
+    defaults: { _controller: CarsBundle:Specifications:deleteCategory }
+
 brand_list:
     path:     /cars/specifications/brand
     defaults: { _controller: CarsBundle:Specifications:brandList }
@@ -25,6 +37,14 @@ brand_list:
 brand_add:
     path:     /cars/specifications/brand/add
     defaults: { _controller: CarsBundle:Specifications:addBrand }
+
+brand_update:
+    path:     /cars/specifications/brand/update/{id}
+    defaults: { _controller: CarsBundle:Specifications:updateBrand }
+
+brand_delete:
+    path:     /cars/specifications/brand/delete/{id}
+    defaults: { _controller: CarsBundle:Specifications:deleteBrand }
 
 model_list:
     path:     /cars/specifications/model

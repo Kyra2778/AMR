@@ -19,7 +19,7 @@ abstract class AbstractManager
      *
      * @param Doctrine $doctrine
      */
-    public function __construct(Doctrine $doctrine)
+    public function __construct($doctrine)
     {
         $this->doctrine = $doctrine;
     }

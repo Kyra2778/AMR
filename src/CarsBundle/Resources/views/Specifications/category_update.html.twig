@@ -1,0 +1,22 @@
+{# src/CarsBundle/Resources/views/Specifications/category_update.html.twig #}
+
+{% extends "CarsBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - Modifier une catégorie
+{% endblock %}
+{% block cars_title %}
+    {{ parent() }} - Modifier une catégorie
+{% endblock %}
+{% block cars_body %}
+    <p>Modifier une catégorie</p>
+    <form action="{{ path('category_update', {'id': id}) }}" method="POST" {{ form_enctype(form) }}>
+        {% include "CarsBundle:Specifications:form.html.twig" %}
+        <div class="row">
+            <div class="large-4 columns">
+                <input class="button" type="submit" value="Modifier" />
+                <a href="{{ path('category_list') }} " class="button secondary">Retour liste</a>
+            </div>
+        </div>
+    </form>
+{% endblock %}

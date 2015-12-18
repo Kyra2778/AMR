@@ -10,7 +10,7 @@
 {% endblock %}
 {% block cars_body %}
     <p>Ajouter une marque</p>
-    <form action="{{ path('brand_add') }}" method="POST">
+    <form action="{{ path('brand_add') }}" method="POST" {{ form_enctype(form) }}>
         {% include "CarsBundle:Specifications:form.html.twig" %}
         <div class="row">
             <div class="large-4 columns">

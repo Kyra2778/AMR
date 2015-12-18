@@ -3,6 +3,8 @@
 namespace CarsBundle\Manager;
 
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bundle\DoctrineBundle\Registry as Doctrine;
+use Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher;
 
 use CarsBundle\Entity\CarsBrand;
 use CarsBundle\Manager\AbstractManager;
@@ -11,7 +13,7 @@ class CarsBrandManager extends AbstractManager
 {
     protected $doctrine;
 
-    public function __construct(Doctrine $doctrine)
+    public function __construct($doctrine)
     {
         $this->doctrine = $doctrine;
     }
@@ -22,33 +24,22 @@ class CarsBrandManager extends AbstractManager
     }
 
     /**
-     * Get Doctrine
+     * Delete
      *
-     * @see CarsBundle\Manager.AbstractManager::getDoctrine()
+     * @see CarsBundle\Manager.AbstractManager::delete()
      */
-    public function getDoctrine()
-    {
-        return $this->doctrine;
-    }
-
-    /**
-     * Add
-     *
-     * @see CarsBundle\Manager.AbstractManager::add()
-     */
-    public function add($entity) {
-        parent::add($entity);
+    public function delete($entity) {
+        parent::delete($entity);
     }
 
 
-    public function newCarsBrand($name)
+    public function deleteCarsBrandById($id)
     {
-        $carsBrand = new CarsBrand();
-        $carsBrand->setLibelle($name);
-        $this->add($carsBrand);
+        $brandCar = $this->find($id);
+        $name = $brandCar->getLibelle();
+        $this->delete($brandCar);
 
-        $this->get('session')->getFlashBag()->add('info', 'La marque ' .$name. ' a bien été enregistrée.');
-        return $carsBrand;
+        return true;
     }
 }
 ?>

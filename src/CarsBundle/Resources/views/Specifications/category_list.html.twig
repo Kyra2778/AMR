@@ -21,11 +21,17 @@
         <tbody>
             {% for category in categories %}
                 <tr>
-                    <td>{{ category.marque }}</td>
-                    <td></td>
-                    <td></td>
+                    <td>{{ category.libelle }}</td>
+                    <td class="tableAMR"><a href="{{ path('category_update', {'id': category.id}) }} " class="button-hollow ultra-small bottom-margin1"><i class="fi-page-edit"></i> Modifier</a></td>
+                    <td class="tableAMR"><a href="{{ path('category_delete', {'id': category.id}) }} " class="button-hollow alert ultra-small bottom-margin1"><i class="fi-trash"></i> Supprimer</a></td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
+    <div class="row">
+        <div class="large-4 columns">
+            <a href="{{ path('category_add') }} " class="button">Ajouter</a>
+            <a href="{{ path('specifications_index') }} " class="button secondary">Retour</a>
+        </div>
+    </div>
 {% endblock %}

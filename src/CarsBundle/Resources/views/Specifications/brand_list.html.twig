@@ -10,22 +10,29 @@
 {% endblock %}
 {% block cars_body %}
     <p>Liste des marques</p>
-    <table role="grid">
-        <thead>
-            <tr>
-                <th>Marque</th>
-                <th></th>
-                <th></th>
+    <table class="tableAMR">
+        <thead class="tableAMR">
+            <tr class="tableAMR">
+                <th class="tableAMR">Marque</th>
+                <th class="tableAMR"></th>
+                <th class="tableAMR"></th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="tableAMR">
             {% for brand in brands %}
-                <tr>
-                    <td>{{ brand.marque }}</td>
-                    <td></td>
-                    <td></td>
+                <tr class="tableAMR">
+                    <td class="tableAMR">{{ brand.libelle }}</td>
+                    <td class="tableAMR"><a href="{{ path('brand_update', {'id': brand.id}) }} " class="button-hollow ultra-small bottom-margin1"><i class="fi-page-edit"></i> Modifier</a></td>
+                    <td class="tableAMR"><a href="{{ path('brand_delete', {'id': brand.id}) }} " class="button-hollow alert ultra-small bottom-margin1"><i class="fi-trash"></i> Supprimer</a></td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
+    <div class="row">
+        <div class="large-4 columns">
+            <a href="{{ path('brand_add') }} " class="button">Ajouter</a>
+            <a href="{{ path('specifications_index') }} " class="button secondary">Retour</a>
+        </div>
+    </div>
+
 {% endblock %}

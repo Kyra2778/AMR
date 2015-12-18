@@ -1,4 +1,7 @@
 services:
     cars.carsBrand:
         class: CarsBundle\Manager\CarsBrandManager
-        arguments: [@doctrine]
+        arguments: ["@doctrine"]
+    cars.carsCategory:
+        class: CarsBundle\Manager\CarsCategoryManager
+        arguments: ["@doctrine"]

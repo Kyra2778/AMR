@@ -46,6 +46,87 @@
     color: #fff;
 }
 
+.button-hollow {
+	display: inline-block;
+	text-align: center;
+	line-height: 1;
+	cursor: pointer;
+	-webkit-appearance: none;
+	transition: all 0.25s ease-out;
+	vertical-align: middle;
+	border-radius: 5px;
+	padding: 0.85em 1em;
+	margin: 0 1rem 1rem 0;
+	font-size: 0.9rem;
+	border: 1px solid #333A40;
+	color: #333A40;
+}
+
+.button-hollow.ultra-small {
+    font-size: 0.75rem;
+}
+    
+.button-hollow, .button.hollow:hover, .button.hollow:focus {
+    background: transparent;
+}
+
+.button-hollow:hover, .button.hollow:focus {
+	border-color: #0c4d78;
+	color: #0c4d78;
+}
+
+.button-hollow.primary {
+	border: 1px solid #2199e8;
+	color: #2199e8;
+}
+
+.button-hollow.primary:hover, .button.hollow.primary:focus {
+	border-color: #0c4d78;
+	color: #0c4d78;
+}
+.button-hollow.secondary {
+	border: 1px solid #777;
+	color: #777;
+}
+
+.button-hollow.secondary:hover, .button.hollow.secondary:focus {
+	border-color: #3c3c3c;
+	color: #3c3c3c;
+}
+
+.button-hollow.success {
+	border: 1px solid #3adb76;
+	color: #3adb76;
+}
+
+.button-hollow.success:hover, .button.hollow.success:focus {
+	border-color: #157539;
+	color: #157539;
+}
+
+.button-hollow.alert {
+	border: 1px solid #ec5840;
+	color: #ec5840;
+}
+
+.button-hollow.alert:hover, .button.hollow.alert:focus {
+	border-color: #881f0e;
+	color: #881f0e;
+}
+
+.button-hollow.warning {
+	border: 1px solid #ffae00;
+	color: #ffae00;
+}
+.button-hollow.warning:hover, .button.hollow.warning:focus {
+	border-color: #805700;
+	color: #805700;
+}
+
+.bottom-margin1 {
+	margin-bottom: 1px;
+}
+
 #menu-accordeon {
 	padding:0;
 	margin:0;
@@ -129,4 +210,31 @@
 	-webkit-box-shadow:0 0 20px rgba(150, 150, 150, .9);
 	-moz-box-shadow:0 0 20px rgba(150, 150, 150, .9);
 	box-shadow:0 0 20px rgba(150,150,150,.9)
+}
+
+.tableAMR {
+	border: 1px solid #DCDCDC;
+}
+
+.linkAMR {
+    background-color:#729EBF; 
+    background-image:-webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
+    background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
+    border-radius: 6px;
+    margin-bottom:2px;
+    box-shadow: 3px 3px 3px #999;
+    border:solid 1px #333A40;
+    display:block;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 0;
+    font-family: verdana;
+    font-size:1.2em;
+
+    text-align: center;
+}
+
+.linkAMR:hover, .linkAMR:focus {
+    background: #729EBF;
+    color: #fff;
 }
